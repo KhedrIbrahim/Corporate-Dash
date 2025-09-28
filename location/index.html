@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <title>Location</title>
+</head>
+<body>
+    <!-- Shadow -->
+    <div class="bx-shadow"></div>
+    <section class="main" id="main">
+        <div class="container">
+            <!-- * * * Navigation Bar * * * -->
+            <nav class="col-1" id="navBar">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="logo" title="Watt Charge Mobilities"></div>
+                        <button class="op-cl-btn" id="op-cl-btn" title="Hide/Show"></button>
+                    </div>
+                    <div class="op-list main-op">
+                        <div class="row tit frst">
+                            <h3 class="txt sm-bol-11 nav-tit">Personal Information</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../dashboard/" class="btn btn-main-dash" id="btnNavDashboard" title="Dashboard"><span class="blk ico"></span> <span class="txt blk">Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="../company-details/" class="btn btn-comp-dtls" id="btnNavCompanyDetails" title="Company Details"><span class="blk ico"></span> <span class="txt blk">Company Details</span></a>
+                            </li>
+                            <li>
+                                <a href="../vehicle-information/" class="btn btn-vehicle-info" id="btnNavVehicleInfo" title="Vehicle Information"><span class="blk ico"></span> <span class="txt blk">Vehicle Information</span><span class="num-det">30</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-locations act" id="btnNavLocations" title="Locations"><span class="blk ico"></span> <span class="txt blk ">Locations</span></a>
+                            </li>
+                            <li>
+                                <a href="../upcoming/" class="btn btn-upcomings" id="btnNavUpcoming" title="Upcomings"><span class="blk ico"></span> <span class="txt blk ">Upcomings</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list service-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">Watt Services</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../corporate-packages/" class="btn btn-corp-pack" id="btnNavCorporatePackage" title="Corporate Package"><span class="blk ico"></span> <span class="txt blk">Corporate Package</span></a>
+                            </li>
+                            <li>
+                                <a href="../services/" class="btn btn-sched-slot" id="btnNavServices" title="Services"><span class="blk ico"></span> <span class="txt blk">Services</span></a>
+                            </li>
+                            <li>
+                                <a href="../coming-soon/" class="btn btn-com-soon" id="btnNavComingSoon" title="Coming Soon"><span class="blk ico"></span> <span class="txt blk">Coming Soon</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list general-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">General</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../subscription-invoices/" class="btn btn-sub-invo" id="btnNavSubsciptionInvoices" title="Subscription & Invoices"><span class="blk ico"></span> <span class="txt blk">Subscription & Invoices</span></a>
+                            </li>
+                            <li>
+                                <a href="../charge-history/" class="btn btn-charge-his" id="btnNavChargeHistory" title="Charge History"><span class="blk ico"></span> <span class="txt blk">Charge History</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt sm-bol-11 copyright">© Wattcharge.io</div>
+                </div>
+            </nav>
+            <div class="col-2">
+                <header>
+                    <div class="el-1 flx">
+                        <button class="op-clos-nav" id="btnHeaderMenu"></button>
+                        <h1 class="page-title med-sol-11 txt-nwrap" id="page-title">Location</h1>
+                    </div>
+                    <div class="el-2">
+                        <div class="el-21">
+                            <div class="noti-bx">
+                                <a href="../notification/"><span class="blk ico button" title="Notifications">
+                                    <span class="not-num">7</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="el-22">
+                            <div class="account-details">
+                                <div class="user-name">Corporate</div>
+                                <div class="user-pos">Administration</div>
+                            </div>
+                            <div class="col-221 flx"><button class="op-cl-user flx" id="btnHeaderUserOpClose"></button></div>
+                        </div>
+                    </div>
+                    <div class="user-options" id="boxHeaderUserOptions">
+                        <button class="btn btn-profile" id="btnHeaderUserProfile" title="Profile"><span class="icon"></span> <span class="txt">Profile</span></button>
+                        <button class="btn btn-faq"><a href="https://wattcharge.io/faq/" target="_blank" title="FAQ"><span class="icon"></span> <span class="txt">FAQ</span></a></button>
+                        <button class="btn btn-logout" title="Log out"><span class="icon"></span> <span class="txt">Log Out</span></button>
+                    </div>
+                </header>
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- * * * * Locations * * * * -->
+                    <section class="locations">
+                        <div class="container">
+                            <div class="head">
+                                <div class="ele-1">
+                                    <h3 class="title">Corporate Location</h3>
+                                    <div class="open-options">
+                                        <button class="flx btnOpenOptions" open-ele-id="boxDropdownLocationOptionsMob"></button>
+                                    </div>
+                                </div>
+                                <div class="dropdown-el" id="boxDropdownLocationOptionsMob">
+                                    <div class="form-g-search">
+                                        <button class="btn-search flx" title="Search"><img src="../img/icon/search.png" alt="Search"></button>
+                                        <input type="text" class="inp-search" placeholder="Search">
+                                    </div>
+                                    <button class="btn btn-add-location" id="btnOpenAddLocationPopup"><span class="icon"></span> <span class="txt">Add Location</span></button>
+                                </div>
+                            </div>
+                            <div class="table-box">
+                                <table class="table-st-one">
+                                    <tbody>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Date</th>
+                                            <th class="cen">Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="two-el-col">
+                                                    <div class="el-1">Location Title</div>
+                                                    <div class="el-2">Parking - Deira - 1 Street - Dubai - Zjednoczone Emiraty Arabskie</div>
+                                                </div>
+                                            </td>
+                                            <td>06 - 09 - 2024</td>
+                                            <td class="cen"><span class="status st-scheduled">Scheduled</span></td>
+                                            <td>
+                                                <div class="btns">
+                                                    <button class="delete btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                    <button class="edit btnEditLocation" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="two-el-col">
+                                                    <div class="el-1">Location Title</div>
+                                                    <div class="el-2">Parking - Deira - 1 Street - Dubai - Zjednoczone Emiraty Arabskie</div>
+                                                </div>
+                                            </td>
+                                            <td>06 - 09 - 2024</td>
+                                            <td class="cen"><span class="status st-completed">Completed</span></td>
+                                            <td>
+                                                <div class="btns">
+                                                    <button class="delete btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                    <button class="edit btnEditLocation" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="two-el-col">
+                                                    <div class="el-1">Location Title</div>
+                                                    <div class="el-2">Parking - Deira - 1 Street - Dubai - Zjednoczone Emiraty Arabskie</div>
+                                                </div>
+                                            </td>
+                                            <td>06 - 09 - 2024</td>
+                                            <td class="cen"><span class="status st-cancelled">Cancelled</span></td>
+                                            <td>
+                                                <div class="btns">
+                                                    <button class="delete btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                    <button class="edit btnEditLocation" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="two-el-col">
+                                                    <div class="el-1">Location Title</div>
+                                                    <div class="el-2">Parking - Deira - 1 Street - Dubai - Zjednoczone Emiraty Arabskie</div>
+                                                </div>
+                                            </td>
+                                            <td>06 - 09 - 2024</td>
+                                            <td class="cen"><span class="status st-completed">Completed</span></td>
+                                            <td>
+                                                <div class="btns">
+                                                    <button class="delete btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                    <button class="edit btnEditLocation" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row-controler">
+                                <div></div>
+                                <div class="ele">
+                                    <button><img src="../img/icon/arrow-left-gray.png" class="icon-24" alt="Arrow Left" title="Previous"></button>
+                                    <button class="act">1</button>
+                                    <button>2</button>
+                                    <button>3</button>
+                                    <button><img src="../img/icon/arrow-right-gray.png" class="icon-24" alt="Arrow Right" title="Next"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- PopUp -->
+    <!-- Profile -->
+    <div class="corporate-profile pop-bx" id="popUpCorporateProfile">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Corporate Profile</div>
+                    <div class="desc">Learn about the history, usage and variations</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popUpCorporateProfile"></button>
+                </div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="oldPassword">Old Password</label>
+                    <input type="password" id="oldPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="oldPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="newPassword">Password</label>
+                    <input type="password" id="newPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="newPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="confirmPassword">Show</button>
+                </div>
+                <div class="alert" style="display: none;">password does not match</div>
+                <div class="row-btn">
+                    <input type="submit" value="Save" class="btn-one">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confim -->
+    <div class="delete-confirm-popup pop-bx" id="popUpDeleteConfim">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpDeleteConfim"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-1.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit">Are you sure you want to delete?</div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns hlf">
+                <div class="hlf-btn">
+                    <button class="btn btn-three clos-ele" parent-data="popUpDeleteConfim">No</button>
+                </div>
+                <div class="hlf-btn">
+                    <button class="btn btn-one">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Successful -->
+    <div class="successful-popup pop-bx" id="popUpSuccessfull">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpSuccessfull"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-2.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/checked-two.png" alt="Icon"></span> <span class="txt">Successful!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div class="error-popup pop-bx" id="popUpError">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpError"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-3.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/error.png" alt="Icon"></span> <span class="txt">Error!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Location -->
+    <div class="add-location-popup pop-bx" id="popUpAddLocation">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Add Corporate Locations</div>
+                    <div class="desc">Learn about the history, usage and variations</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popUpAddLocation"></button>
+                </div>
+            </div>
+            <div id="map" class="map"></div>
+            <form action="">
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="locationTitleInput">Location Title</label>
+                    <!-- Attributes will be added to input#locationTitleInput after selecting the location (check in console)
+                    <input type="text" id="locationTitleInput" class="inp-st-one bor-rad" placeholder="Title" data-lat="25.197233275964653" data-lng="55.27974843978882" data-place-name="73 Financial Center Rd - Downtown Dubai - Dubai - United Arab Emirates" data-formatted-address="73 Financial Center Rd - Downtown Dubai - Dubai - United Arab Emirates">
+                    
+                    -->
+                    <input type="text" id="locationTitleInput" class="inp-st-one bor-rad" placeholder="Title">
+                    <div id="dropdownLocations" class="dropdown-locations"></div>
+                    <button class="search" id="btnSearchLatLngMap" title="Search Location"><img src="../img/icon/search.png" alt="Search"></button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="locationDetailsInp">Location Details</label>
+                    <textarea id="locationDetailsInp"class="inp-st-one bor-rad" placeholder="Type here.."></textarea>
+                </div>
+                <div class="alert" style="display: none;">Error!</div>
+                <div class="row-btn">
+                    <input type="submit" value="Save" id="btnSubmitLocationDtls" class="btn-one">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Location -->
+    <div class="edit-location-popup pop-bx" id="popUpEditLocation">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Edit Corporate Locations</div>
+                    <div class="desc">Learn about the history, usage and variations</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popUpEditLocation"></button>
+                </div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="locationTitleInputEdit">Location Title</label>
+                    <input type="text" id="locationTitleInputEdit" class="inp-st-one bor-rad" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="locationDetailsInpEdit">Location Details</label>
+                    <textarea id="locationDetailsInpEdit"class="inp-st-one bor-rad" placeholder="Type here.."></textarea>
+                </div>
+                <div class="alert" style="display: none;">Error!</div>
+                <div class="row-btn">
+                    <input type="submit" value="Save" class="btn-one">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="master.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVbvUlupbp_4xEafWMczx7JRyMRitbsX0&libraries=places,marker&callback=initMap" async defer></script>
+    <script src="../js/general.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <title>Corporate Dashboard</title>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <section class="slide">
+        <div class="container">
+            <div class="logo"><img src="../img/logo-white-full.png" alt="Logo" title="Watt Charge Mobilities"></div>
+            <div class="main">
+                <div class="box one">
+                    <div class="content">
+                        <div class="img"><img src="../img/wattman-4.png" alt="WattMan"></div>
+                        <div class="title">Thank you for trust us in providing top services for yours vehicles</div>
+                        <div class="desc">there is one last step for enabling us to work with you vehicle, please click on the link below and grand us access to your car</div>
+                        <div class="btn-row">
+                            <a href="#" class="btn-open">Open Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box two">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                            <div class="swiper-slide"><img src="../img/tesla.png" alt="Tesla"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+            loopFillGroupWithBlank: true,
+            breakpoints: {
+                1300: {
+                    slidesPerView: 5,
+                    spaceBetween: 0,
+                },
+                950: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+                0: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+            },
+        });
+        
+    </script>
+</body>
+</html>
