@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <title>Company Details</title>
+</head>
+<body>
+    <!-- Shadow -->
+    <div class="bx-shadow"></div>
+    <section class="main" id="main">
+        <div class="container">
+            <!-- * * * Navigation Bar * * * -->
+            <nav class="col-1" id="navBar">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="logo" title="Watt Charge Mobilities"></div>
+                        <button class="op-cl-btn" id="op-cl-btn" title="Hide/Show"></button>
+                    </div>
+                    <div class="op-list main-op">
+                        <div class="row tit frst">
+                            <h3 class="txt sm-bol-11 nav-tit">Personal Information</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../dashboard/" class="btn btn-main-dash" id="btnNavDashboard" title="Dashboard"><span class="blk ico"></span> <span class="txt blk">Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-comp-dtls act" id="btnNavCompanyDetails" title="Company Details"><span class="blk ico"></span> <span class="txt blk">Company Details</span></a>
+                            </li>
+                            <li>
+                                <a href="../vehicle-information/" class="btn btn-vehicle-info" id="btnNavVehicleInfo" title="Vehicle Information"><span class="blk ico"></span> <span class="txt blk">Vehicle Information</span><span class="num-det">30</span></a>
+                            </li>
+                            <li>
+                                <a href="../location/" class="btn btn-locations" id="btnNavLocations" title="Locations"><span class="blk ico"></span> <span class="txt blk ">Locations</span></a>
+                            </li>
+                            <li>
+                                <a href="../upcoming/" class="btn btn-upcomings" id="btnNavUpcoming" title="Upcomings"><span class="blk ico"></span> <span class="txt blk ">Upcomings</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list service-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">Watt Services</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../corporate-packages/" class="btn btn-corp-pack" id="btnNavCorporatePackage" title="Corporate Package"><span class="blk ico"></span> <span class="txt blk">Corporate Package</span></a>
+                            </li>
+                            <li>
+                                <a href="../services/" class="btn btn-sched-slot" id="btnNavServices" title="Services"><span class="blk ico"></span> <span class="txt blk">Services</span></a>
+                            </li>
+                            <li>
+                                <a href="../coming-soon/" class="btn btn-com-soon" id="btnNavComingSoon" title="Coming Soon"><span class="blk ico"></span> <span class="txt blk">Coming Soon</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list general-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">General</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../subscription-invoices/" class="btn btn-sub-invo" id="btnNavSubsciptionInvoices" title="Subscription & Invoices"><span class="blk ico"></span> <span class="txt blk">Subscription & Invoices</span></a>
+                            </li>
+                            <li>
+                                <a href="../charge-history/" class="btn btn-charge-his" id="btnNavChargeHistory" title="Charge History"><span class="blk ico"></span> <span class="txt blk">Charge History</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt sm-bol-11 copyright">© Wattcharge.io</div>
+                </div>
+            </nav>
+            <div class="col-2">
+                <header>
+                    <div class="el-1 flx">
+                        <button class="op-clos-nav" id="btnHeaderMenu"></button>
+                        <h1 class="page-title med-sol-11 txt-nwrap" id="page-title">Company Details</h1>
+                    </div>
+                    <div class="el-2">
+                        <div class="el-21">
+                            <div class="noti-bx">
+                                <a href="../notification/"><span class="blk ico button" title="Notifications">
+                                    <span class="not-num">7</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="el-22">
+                            <div class="account-details">
+                                <div class="user-name">Corporate</div>
+                                <div class="user-pos">Administration</div>
+                            </div>
+                            <div class="col-221 flx"><button class="op-cl-user flx" id="btnHeaderUserOpClose"></button></div>
+                        </div>
+                    </div>
+                    <div class="user-options" id="boxHeaderUserOptions">
+                        <button class="btn btn-profile" id="btnHeaderUserProfile" title="Profile"><span class="icon"></span> <span class="txt">Profile</span></button>
+                        <button class="btn btn-faq"><a href="https://wattcharge.io/faq/" target="_blank" title="FAQ"><span class="icon"></span> <span class="txt">FAQ</span></a></button>
+                        <button class="btn btn-logout" title="Log out"><span class="icon"></span> <span class="txt">Log Out</span></button>
+                    </div>
+                </header>
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- * * * * Company Details * * * * -->
+                    <section class="company-details">
+                        <div class="container cont-comp-info act" id="boxInfoCompany">
+                            <div class="col-1">
+                                <!-- Company Info -->
+                                <div class="bx-dtl comp-info">
+                                    <div class="ele-1">
+                                        <div class="logo">
+                                            <img src="../img/sinatra-black.png" alt="Company Logo">
+                                            <button class="edit flx btnEditCorDtls" edit-type="sectionEditCorProfile" edit-btn-type="btnEditCorProfile" title="Edit"><img src="../img/icon/edit.png" alt="Edit"></button>
+                                        </div>
+                                        <div class="dtls">
+                                            <h2 class="name">Sinatra Holding</h2>
+                                            <div class="site"><a href="https://sinatraholdings.com/" target="_blank">www.sinatraholding.com</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="ele-2">
+                                        <div class="info call">
+                                            <div class="icon"></div>
+                                            <div class="txt txt-nwrap">(44) 123 1234 123</div>
+                                        </div>
+                                        <div class="info msg">
+                                            <div class="icon"></div>
+                                            <div class="txt txt-nwrap">alecthompson@mail.com</div>
+                                        </div>
+                                        <div class="info location">
+                                            <div class="icon"></div>
+                                            <div class="txt txt-nwrap">United Arab Emirates</div>
+                                        </div>
+                                        <div class="info date">
+                                            <div class="icon"></div>
+                                            <div class="txt txt-nwrap">05-09-2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Corporate Documents -->
+                                <div class="bx-dtl comp-documents">
+                                    <div class="head">
+                                        <h3 class="title">Documents</h3>
+                                    </div>
+                                    <div class="dtls">
+                                        <table>
+                                            <tbody>
+                                                <!-- Doc 1 -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="documnet">
+                                                            <div>
+                                                                <div class="icon"><img src="../img/icon/document.png" alt="Doc"></div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="doc-tit">Document Name</div>
+                                                                <div class="doc-name">RtaReport.pdf</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date-dtl">
+                                                            <div class="tit">Created at:</div>
+                                                            <div class="date">21 Jan 2024</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btns">
+                                                            <button class="btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                            <button class="btnEditCorDtls" edit-type="sectionEditCorDocumnets" edit-btn-type="btnEditCorDocs" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- Doc 2 -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="documnet">
+                                                            <div>
+                                                                <div class="icon"><img src="../img/icon/document.png" alt="Doc"></div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="doc-tit">Document Name</div>
+                                                                <div class="doc-name">RtaReport.pdf</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date-dtl">
+                                                            <div class="tit">Created at:</div>
+                                                            <div class="date">21 Jan 2024</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btns">
+                                                            <button class="btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                            <button class="btnEditCorDtls" edit-type="sectionEditCorDocumnets" edit-btn-type="btnEditCorDocs" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- Doc 3 -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="documnet">
+                                                            <div>
+                                                                <div class="icon"><img src="../img/icon/document.png" alt="Doc"></div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="doc-tit">Document Name</div>
+                                                                <div class="doc-name">RtaReport.pdf</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date-dtl">
+                                                            <div class="tit">Created at:</div>
+                                                            <div class="date">21 Jan 2024</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btns">
+                                                            <button class="btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                            <button class="btnEditCorDtls" edit-type="sectionEditCorDocumnets" edit-btn-type="btnEditCorDocs" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- Doc 4 -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="documnet">
+                                                            <div>
+                                                                <div class="icon"><img src="../img/icon/document.png" alt="Doc"></div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="doc-tit">Document Name</div>
+                                                                <div class="doc-name">RtaReport.pdf</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date-dtl">
+                                                            <div class="tit">Created at:</div>
+                                                            <div class="date">21 Jan 2024</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btns">
+                                                            <button class="btnOpDeletePopup" open-el-id="popUpDeleteConfim" title="Delete"><img src="../img/icon/delete.png" alt="Delete"></button>
+                                                            <button class="btnEditCorDtls" edit-type="sectionEditCorDocumnets" edit-btn-type="btnEditCorDocs" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Bank Details -->
+                                <div class="bx-dtl comp-bank-details">
+                                    <div class="head">
+                                        <h3 class="title">Corporate Bank Details</h3>
+                                        <div class="edit">
+                                            <button class="flx btnEditCorDtls" edit-type="sectionEditCorBankDtls" edit-btn-type="btnEditCorBank" title="Edit"><img src="../img/icon/edit-two.png" alt="Edit"></button>
+                                        </div>
+                                    </div>
+                                    <div class="dtls-cont">
+                                        <div class="row-dtl">
+                                            <div class="tit">Bank Name</div>
+                                            <div class="val">None</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">Bank Name</div>
+                                            <div class="val">None</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">Account Name</div>
+                                            <div class="val">None</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <!-- Package Details -->
+                                <div class="bx-dtl package-details">
+                                    <div class="head">
+                                        <div class="package-img"><img src="../img/icon/package-one.png" alt="ICON"></div>
+                                        <h3 class="title">Package name</h3>
+                                    </div>
+                                    <div class="dtls-cont">
+                                        <div class="row-dtl">
+                                            <div class="tit">Package Validity</div>
+                                            <div class="val">Aug. 20, 2024</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">Subscription Date</div>
+                                            <div class="val">Aug. 20, 2024</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">Total Charge Consume</div>
+                                            <div class="val">5</div>
+                                        </div>
+                                    </div>
+                                    <div class="pack-info">
+                                        <p>Minimum Number of cars per hour 8 cars Best Recommendation is 80% on fast charging Reward for car Subscribed Please note un used charging during the month period is not refundable</p>
+                                    </div>
+                                </div>
+                                <!-- Payment Details -->
+                                <div class="bx-dtl payment-details">
+                                    <div class="head">
+                                        <h3 class="title">Payment Details</h3>
+                                    </div>
+                                    <div class="dtls-cont">
+                                        <div class="row-dtl">
+                                            <div class="tit">Amount</div>
+                                            <div class="val">8100 AED</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">VAT</div>
+                                            <div class="val">375</div>
+                                        </div>
+                                        <div class="row-dtl">
+                                            <div class="tit">Payment Method</div>
+                                            <div class="val">Card</div>
+                                        </div>
+                                    </div>
+                                    <div class="btns">
+                                        <button class="btn-three">Payment Receipt</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont-comp-edit" id="boxEditCompany">
+                            <!-- New -- Back Btn -->
+                            <div class="btn-back-row"><button class="btnBack" ele-to-back="boxInfoCompany" current-el="boxEditCompany"><span class="icon flx"><img src="../img/icon/arrow-left-long.png" alt="Back"></span> <span class="txt">Back</span></button></div>
+                            <!-- New -- Back Btn -->
+                            <div class="cont">
+                                <div class="head">
+                                    <h3 class="title">Edit Profile</h3>
+                                </div>
+                                <div class="content">
+                                    <div class="asid">
+                                        <button class="btnEditCorProfile act" id="btnEditCorProfile" open-el-data="sectionEditCorProfile">Edit Profile</button>
+                                        <button class="btnEditCorProfile" id="btnEditCorDocs" open-el-data="sectionEditCorDocumnets">Documents</button>
+                                        <button class="btnEditCorProfile" id="btnEditCorBank" open-el-data="sectionEditCorBankDtls">Bank Details</button>
+                                    </div>
+                                    <!-- Edit Profile Section -->
+                                    <div class="ed-section profile act" id="sectionEditCorProfile">
+                                        <div class="picture-dtls">
+                                            <div class="title">Profile Picture</div>
+                                            <div class="photo-dtl">
+                                                <div class="col-1 flx">
+                                                    <div class="logo">
+                                                        <img src="../img/sinatra-black.png" alt="Company Logo">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="row-dtls">
+                                                        <span class="photo-name">file-name.jpg</span>
+                                                        <span><button class="delete" title="Delete picture">Delete</button></span>
+                                                    </div>
+                                                    <button class="btn-three" id="btnUploadCompanyPicture">Choose File</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form action="">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="companyName">Company name</label>
+                                                    <input type="text" id="companyName" class="inp-st-one bor-rad" placeholder="Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="compPostalCode">Postal Code</label>
+                                                    <input type="text" id="compPostalCode" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="selectDate" class="lab-st-one">Date</label>
+                                                    <select class="select-one padd" title="Select" id="selectDate">
+                                                        <option value="Select">Select</option>
+                                                        <option value="Option">Option 2</option>
+                                                        <option value="Option">Option 3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="compWebsite">Website</label>
+                                                    <input type="text" id="compWebsite" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="companyEmail">Email</label>
+                                                    <input type="text" id="companyEmail" class="inp-st-one bor-rad" placeholder="eg:info@email.com">
+                                                </div>
+                                                <div class="form-group phone">
+                                                    <label class="lab lab-st-one" for="compPhone">Phone</label>
+                                                    <div class="phone-input-container">
+                                                        <div class="custom-select">
+                                                            <div class="selected-option" data-code="+971"><img class="flag" src="https://flagcdn.com/h20/ae.png" alt="UAE Flag"> +971</div>
+                                                            <div class="options-container">
+                                                                <div class="option" data-code="+971"><img class="flag" src="https://flagcdn.com/h20/ae.png" alt="USA Flag"> +971</div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="tel" id="compPhone" class="inp-phone number-inp" placeholder="00 000 000" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="selectCompCountry" class="lab-st-one">Country</label>
+                                                    <select class="select-one padd" title="Select" id="selectCompCountry">
+                                                        <option value="Select">Select</option>
+                                                        <option value="UAE">UAE</option>
+                                                        <option value="KSA">KSA</option>
+                                                        <option value="QTR">QTR</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="compCity">City</label>
+                                                    <input type="text" id="compCity" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                            </div>
+                                            <div class="alert" style="display: none;">Error!</div>
+                                            <div class="row-btn">
+                                                <div class="submit-el">
+                                                    <input type="submit" value="Save" class="btn-one">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="ed-section documents" id="sectionEditCorDocumnets">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label class="lab lab-st-one" for="documentTitle">Document Title</label>
+                                                <input type="text" id="documentTitle" class="inp-st-one bor-rad" placeholder="Enter">
+                                            </div>
+                                            <div class="form-upload-docs upl-btn">
+                                                <label class="upload-label" for="companyDocsUpload" id="lab-upload">
+                                                    <div class="top">
+                                                        <div class="img flx"><img src="../img/icon/cloud-add.png" alt="Upload"></div>
+                                                        <div class="tit">Choose a file or drag & drop it here</div>
+                                                        <div class="sub-tit">JPG, JPEG, PNG, and SVG</div>
+                                                    </div>
+                                                    <div class="btns">
+                                                        <button>Browse Picture</button>
+                                                    </div>
+                                                    <input type="file" id="companyDocsUpload" name="uploadedFile">
+                                                </label>
+                                            </div>
+                                            <div class="alert" style="display: block;">Error!</div>
+                                            <div class="row-btn">
+                                                <div class="submit-el">
+                                                    <input type="submit" value="Save" class="btn-one">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="ed-section bank-details" id="sectionEditCorBankDtls">
+                                        <form action="">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="inpBankName">Bank Name</label>
+                                                    <input type="text" id="inpBankName" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="inpIfscCode">IFSC Code</label>
+                                                    <input type="text" id="inpIfscCode" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="inpAccountNum">Account Number</label>
+                                                    <input type="text" id="inpAccountNum" class="inp-st-one bor-rad number-inp" placeholder="Enter">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="lab lab-st-one" for="inpAccountName">Account Holder Name</label>
+                                                    <input type="text" id="inpAccountName" class="inp-st-one bor-rad" placeholder="Enter">
+                                                </div>
+                                            </div>
+                                            <div class="alert" style="display: block;">Error!</div>
+                                            <div class="row-btn">
+                                                <div class="submit-el">
+                                                    <input type="submit" value="Save" class="btn-one">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- PopUp -->
+    <!-- Profile -->
+    <div class="corporate-profile pop-bx" id="popUpCorporateProfile">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Corporate Profile</div>
+                    <div class="desc">Learn about the history, usage and variations</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popUpCorporateProfile"></button>
+                </div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="oldPassword">Old Password</label>
+                    <input type="password" id="oldPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="oldPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="newPassword">Password</label>
+                    <input type="password" id="newPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="newPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="confirmPassword">Show</button>
+                </div>
+                <div class="alert" style="display: none;">password does not match</div>
+                <div class="row-btn">
+                    <input type="submit" value="Save" class="btn-one">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confim -->
+    <div class="delete-confirm-popup pop-bx" id="popUpDeleteConfim">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpDeleteConfim"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-1.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit">Are you sure you want to delete?</div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns hlf">
+                <div class="hlf-btn">
+                    <button class="btn btn-three clos-ele" parent-data="popUpDeleteConfim">No</button>
+                </div>
+                <div class="hlf-btn">
+                    <button class="btn btn-one">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Successful -->
+    <div class="successful-popup pop-bx" id="popUpSuccessfull">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpSuccessfull"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-2.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/checked-two.png" alt="Icon"></span> <span class="txt">Successful!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div class="error-popup pop-bx" id="popUpError">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpError"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-3.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/error.png" alt="Icon"></span> <span class="txt">Error!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Company Picture -->
+    <div class="upload-comp-picture pop-bx" id="popupUploadCompanyPicture">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Upload Profile Picture</div>
+                    <div class="desc">Select and upload the file of your choice</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popupUploadCompanyPicture"></button>
+                </div>
+            </div>
+            <form class="upload-form">
+                <div class="upl-btn">
+                    <label for="companyPictureUpload" id="lab-upload">
+                        <div class="top">
+                            <div class="img flx"><img src="../img/icon/cloud-add.png" alt="Upload"></div>
+                            <div class="tit">Choose a file or drag & drop it here</div>
+                            <div class="sub-tit">JPG, JPEG, PNG, and SVG</div>
+                        </div>
+                        <div class="btns">
+                            <button>Browse Picture</button>
+                        </div>
+                        <input type="file" id="companyPictureUpload" name="uploadedFile">
+                    </label>
+                </div>
+                <div class="alert" style="display: none;">Error!</div>
+                <input type="submit" class="submit" value="Upload Picture">
+            </form>
+        </div>
+    </div>
+
+    <script src="master.js"></script>
+    <script src="../js/general.js"></script>
+</body>
+</html>

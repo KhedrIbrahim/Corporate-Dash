@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <title>Forget Password</title>
+</head>
+<body>
+    <section class="forget-password">
+        <div class="container">
+            <div class="logo-bx">
+                <div class="logo"><img src="../img/logo-black-full.png" alt="Watt Charge Logo" title="Watt Charge Mobilities"></div>
+            </div>
+            <div class="content-bx">
+                <!-- Add (act) class to active Box -->
+                <!-- Forget Password Box -->
+                <div class="box forget-pass act">
+                    <div class="cont">
+                        <div class="sec-icon"><img src="../img/icon/key.png" alt="Icon"></div>
+                        <div class="head">
+                            <h1 class="title">Forget Password</h1>
+                            <div class="desc">No worries, we will send reset information.</div>
+                        </div>
+                        <form action="">
+                            <div class="form-group">
+                                <label class="lab lab-st-one" for="email">Email</label>
+                                <input type="text" name="email" id="email" class="inp-st-one" placeholder="eg: company@email.com">
+                            </div>
+                            <!-- Error -->
+                            <div class="alert" style="display: none;">Invalid email.</div>
+                            <div class="row row-btn">
+                                <input type="submit" value="Sign in" class="btn-one"  id="testBtnForget">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- OTP Box -->
+                <div class="box otp-box">
+                    <div class="cont">
+                        <div class="sec-icon"><img src="../img/icon/msg.png" alt="Icon"></div>
+                        <div class="head">
+                            <h1 class="title">Check your email</h1>
+                            <div class="desc">We sent a reset OTP to <span class="email-txt">name@email.com</span></div>
+                        </div>
+                        <form action="">
+                            <div class="form-group form-g-otp">
+                                <div class="otp-inputs">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                    <input type="text" class="otp-inp" maxlength="1">
+                                </div>
+                                <div class="row resend-row">Didn’t receive code? <button class="resend-btn">Click to resend</button></div>
+                                <!-- Error -->
+                                <div class="alert" style="display: none;">Invalid OTP</div>
+                            </div>
+                            <div class="row row-btn">
+                                <input type="submit" value="Verify" class="btn-one" id="testBtnOtp">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Set New Password -->
+                <div class="box set-new-pass">
+                    <div class="cont">
+                        <div class="sec-icon"><img src="../img/icon/update-key.png" alt="Icon"></div>
+                        <div class="head">
+                            <h1 class="title">Set new password</h1>
+                            <div class="desc">Your new password must be different to previously used passwords.</div>
+                        </div>
+                        <form action="">
+                            <div class="form-group">
+                                <label class="lab lab-st-one" for="password">New Password</label>
+                                <input type="password" name="password" id="password" class="inp-st-one" placeholder="Enter password">
+                                <button class="show-hid-pass" id="showNewPass">Show</button>
+                                <div class="hint">Must be at least 8 charactors</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="lab lab-st-one" for="confirmPassword">Confirm Password</label>
+                                <input type="password" name="confirmPassword" id="confirmPassword" class="inp-st-one" placeholder="Re-Enter password">
+                                <button class="show-hid-pass" id="showConfirmPass">Show</button>
+                            </div>
+                            <!-- Error -->
+                            <div class="alert" style="display: none;">Error.</div>
+                            <div class="row row-btn">
+                                <input type="submit" value="Reset" class="btn-one" id="testBtnSetPass">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Password Reset Successfully Box -->
+                <div class="box password-reset-success">
+                    <div class="cont">
+                        <div class="sec-icon"><img src="../img/icon/check-success.png" alt="Icon"></div>
+                        <div class="head">
+                            <h1 class="title">Password Reset</h1>
+                            <div class="desc">Your new password has been reset successfully. Click below to login magically.</div>
+                        </div>
+                        <div class="row row-btn">
+                            <button class="btn-one">Continue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row back-row"><a href="#" class="lnk"><span class="flx"><img class="icon-30" src="../img/icon/arrow-left-long-black.png" alt="Arrow Left"></span><span class="blk">Back to login</span></a></div>
+            </div>
+            <footer>
+                <div class="copyright">© Wattcharge.io</div>
+                <div class="links">
+                    <span class="blk"><a href="#" class="lnk">Customer Support</a></span>
+                    <span class="blk"><a href="#" class="lnk">Terms of Services</a></span>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

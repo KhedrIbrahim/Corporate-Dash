@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Shadow -->
+    <div class="bx-shadow"></div>
+    <section class="main" id="main">
+        <div class="container">
+            <!-- * * * Navigation Bar * * * -->
+            <nav class="col-1" id="navBar">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="logo" title="Watt Charge Mobilities"></div>
+                        <button class="op-cl-btn" id="op-cl-btn" title="Hide/Show"></button>
+                    </div>
+                    <div class="op-list main-op">
+                        <div class="row tit frst">
+                            <h3 class="txt sm-bol-11 nav-tit">Personal Information</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="#" class="btn btn-main-dash act" id="btnNavDashboard" title="Dashboard"><span class="blk ico"></span> <span class="txt blk">Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="../company-details/" class="btn btn-comp-dtls" id="btnNavCompanyDetails" title="Company Details"><span class="blk ico"></span> <span class="txt blk">Company Details</span></a>
+                            </li>
+                            <li>
+                                <a href="../vehicle-information/" class="btn btn-vehicle-info" id="btnNavVehicleInfo" title="Vehicle Information"><span class="blk ico"></span> <span class="txt blk">Vehicle Information</span><span class="num-det">30</span></a>
+                            </li>
+                            <li>
+                                <a href="../location/" class="btn btn-locations" id="btnNavLocations" title="Locations"><span class="blk ico"></span> <span class="txt blk ">Locations</span></a>
+                            </li>
+                            <li>
+                                <a href="../upcoming/" class="btn btn-upcomings" id="btnNavUpcoming" title="Upcomings"><span class="blk ico"></span> <span class="txt blk ">Upcomings</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list service-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">Watt Services</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../corporate-packages/" class="btn btn-corp-pack" id="btnNavCorporatePackage" title="Corporate Package"><span class="blk ico"></span> <span class="txt blk">Corporate Package</span></a>
+                            </li>
+                            <li>
+                                <a href="../services/" class="btn btn-sched-slot" id="btnNavServices" title="Services"><span class="blk ico"></span> <span class="txt blk">Services</span></a>
+                            </li>
+                            <li>
+                                <a href="../coming-soon/" class="btn btn-com-soon" id="btnNavComingSoon" title="Coming Soon"><span class="blk ico"></span> <span class="txt blk">Coming Soon</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="op-list general-op">
+                        <div class="row tit">
+                            <h3 class="txt sm-bol-11 nav-tit">General</h3>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <a href="../subscription-invoices/" class="btn btn-sub-invo" id="btnNavSubsciptionInvoices" title="Subscription & Invoices"><span class="blk ico"></span> <span class="txt blk">Subscription & Invoices</span></a>
+                            </li>
+                            <li>
+                                <a href="../charge-history/" class="btn btn-charge-his" id="btnNavChargeHistory" title="Charge History"><span class="blk ico"></span> <span class="txt blk">Charge History</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt sm-bol-11 copyright">© Wattcharge.io</div>
+                </div>
+            </nav>
+            <div class="col-2">
+                <header>
+                    <div class="el-1 flx">
+                        <button class="op-clos-nav" id="btnHeaderMenu"></button>
+                        <h1 class="page-title med-sol-11 txt-nwrap" id="page-title">Dashboard</h1>
+                    </div>
+                    <div class="el-2">
+                        <div class="el-21">
+                            <!-- Update Notification Element In all Pages -->
+                            <div class="noti-bx">
+                                <a href="../notification/"><span class="blk ico button" title="Notifications">
+                                    <!-- Number Of Notifications -->
+                                    <span class="not-num">7</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="el-22">
+                            <div class="account-details">
+                                <div class="user-name">Corporate</div>
+                                <div class="user-pos">Administration</div>
+                            </div>
+                            <div class="col-221 flx"><button class="op-cl-user flx" id="btnHeaderUserOpClose"></button></div>
+                        </div>
+                    </div>
+                    <div class="user-options" id="boxHeaderUserOptions">
+                        <button class="btn btn-profile" id="btnHeaderUserProfile" title="Profile"><span class="icon"></span> <span class="txt">Profile</span></button>
+                        <button class="btn btn-faq"><a href="https://wattcharge.io/faq/" target="_blank" title="FAQ"><span class="icon"></span> <span class="txt">FAQ</span></a></button>
+                        <button class="btn btn-logout" title="Log out"><span class="icon"></span> <span class="txt">Log Out</span></button>
+                    </div>
+                </header>
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- * * * * Dashboard Main * * * * -->
+                    <section class="dashboard-main">
+                        <div class="container">
+                            <!-- Car Details Card -->
+                            <div class="row row-1">
+
+                                <!-- Note: Add Class (act) to active need cards-->
+                                
+                                <!-- Car Details -1- -->
+                                <div class="bx car-dtls online">
+                                    <div class="cont">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <!-- Car-1 -->
+                                                <div class="swiper-slide">
+                                                    <div class="head">
+                                                        <div class="ele-1">
+                                                            <div class="car-brand">Porsche Taycan</div>
+                                                            <div class="sub-tit">Your Car</div>
+                                                        </div>
+                                                        <div class="ele-2">
+                                                            <div class="btry-el">
+                                                                <!-- Battery Element -->
+                                                                <div class="body flx">
+                                                                    <span class="btry-cover"></span>
+                                                                    <span class="shadow"></span>
+                                                                    <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                                    <div class="val" data-btry-level="10"></div> <!-- Value Of Battery Level 56% check dashboard.js -->
+                                                                </div>
+                                                                <div class="top"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="car-img-cont">
+                                                        <div class="img"><img src="../img/porsche-taycan-2.png" alt="EV"></div>
+                                                    </div>
+                                                    <div class="row row-car-dtls">
+                                                        <div class="dtl scan-time">
+                                                            <div class="tit">Scan Time</div>
+                                                            <div class="info">18:00</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl start-charge">
+                                                            <div class="tit">Charge Start</div>
+                                                            <div class="info">18:00</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl kw-used">
+                                                            <div class="tit">KW Used</div>
+                                                            <div class="info">15 KW</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Car-2 -->
+                                                <div class="swiper-slide">
+                                                    <div class="head">
+                                                        <div class="ele-1">
+                                                            <div class="car-brand">Tesla R</div>
+                                                            <div class="sub-tit">Your Car</div>
+                                                        </div>
+                                                        <div class="ele-2">
+                                                            <div class="btry-el">
+                                                                <div class="body flx">
+                                                                    <span class="btry-cover"></span>
+                                                                    <span class="shadow"></span>
+                                                                    <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                                    <div class="val" data-btry-level="56"></div> 
+                                                                </div>
+                                                                <div class="top"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="car-img-cont">
+                                                        <div class="img"><img src="../img/porsche-taycan.png" alt="EV"></div>
+                                                    </div>
+                                                    <div class="row row-car-dtls">
+                                                        <div class="dtl scan-time">
+                                                            <div class="tit">Scan Time</div>
+                                                            <div class="info">12:00</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl start-charge">
+                                                            <div class="tit">Charge Start</div>
+                                                            <div class="info">16:00</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl kw-used">
+                                                            <div class="tit">KW Used</div>
+                                                            <div class="info">33 KW</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Car-3 -->
+                                                <div class="swiper-slide">
+                                                    <div class="head">
+                                                        <div class="ele-1">
+                                                            <div class="car-brand">Cybertruck</div>
+                                                            <div class="sub-tit">Your Car</div>
+                                                        </div>
+                                                        <div class="ele-2">
+                                                            <div class="btry-el">
+                                                                <div class="body flx">
+                                                                    <span class="btry-cover"></span>
+                                                                    <span class="shadow"></span>
+                                                                    <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                                    <div class="val" data-btry-level="30"></div> 
+                                                                </div>
+                                                                <div class="top"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="car-img-cont">
+                                                        <div class="img"><img src="../img/porsche-taycan-2.png" alt="EV"></div>
+                                                    </div>
+                                                    <div class="row row-car-dtls">
+                                                        <div class="dtl scan-time">
+                                                            <div class="tit">Scan Time</div>
+                                                            <div class="info">22:00</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl start-charge">
+                                                            <div class="tit">Charge Start</div>
+                                                            <div class="info">22:30</div>
+                                                        </div>
+                                                        <div class="lin"></div>
+                                                        <div class="dtl kw-used">
+                                                            <div class="tit">KW Used</div>
+                                                            <div class="info">12 KW</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Upcoming Charging -->
+                                <div class="bx upcoming-charging online">
+                                    <div class="cont">
+                                        <div class="head">
+                                            <div class="ele-1">
+                                                <div class="tit">Upcoming Charging </div>
+                                                <div class="status">(Charge Not Started Yet)</div>
+                                            </div>
+                                        </div>
+                                        <div class="img-el">
+                                            <div class="img"><img src="../img/icon/charge-station-green.png" alt="Charger">
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="driver-det">
+                                                <div class="name"><span>Driver Name : </span><span>ALEX</span></div>
+                                                <div class="phone"><span>Driver Contact : </span><span>971 5821 1919</span></div>
+                                            </div>
+                                            <div class="dtls">
+                                                <div class="row">
+                                                    <div class="brand">Tesla R</div>
+                                                    <div class="time">18:30</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="brand">Cybertruck</div>
+                                                    <div class="time">18:35</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="brand">BYD</div>
+                                                    <div class="time">18:53</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Car Details -2- -->
+                                <div class="bx car-dtls offline act">
+                                    <div class="cont">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <!-- Car-1 -->
+                                                <div class="swiper-slide">
+                                                    <div class="head">
+                                                        <div class="ele-1">
+                                                            <div class="car-brand">Porsche Taycan</div>
+                                                            <div class="sub-tit">Your Car</div>
+                                                        </div>
+                                                        <div class="ele-2">
+                                                            <div class="btry-el">
+                                                                <!-- Battery Element -->
+                                                                <div class="body flx">
+                                                                    <span class="btry-cover"></span>
+                                                                    <span class="shadow"></span>
+                                                                    <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                                    <div class="val" data-btry-level="21"></div> <!-- Value Of Battery Level 56% check dashboard.js -->
+                                                                </div>
+                                                                <div class="top"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="car-img-cont">
+                                                        <div class="img"><img src="../img/porsche-taycan-2.png" alt="EV"></div>
+                                                    </div>
+                                                    <div class="row row-car-dtls">
+                                                        <div class="dtl date">
+                                                            <div class="tit">Last Charge Date</div>
+                                                            <div class="info">30-09-24</div>
+                                                        </div>
+                                                        <div class="dtl kw-used">
+                                                            <div class="tit">KW Used</div>
+                                                            <div class="info">32 KW</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Car-3 -->
+                                                <div class="swiper-slide">
+                                                    <div class="head">
+                                                        <div class="ele-1">
+                                                            <div class="car-brand">Cybertruck</div>
+                                                            <div class="sub-tit">Your Car</div>
+                                                        </div>
+                                                        <div class="ele-2">
+                                                            <div class="btry-el">
+                                                                <div class="body flx">
+                                                                    <span class="btry-cover"></span>
+                                                                    <span class="shadow"></span>
+                                                                    <div class="back"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                                                    <div class="val" data-btry-level="65"></div> 
+                                                                </div>
+                                                                <div class="top"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="car-img-cont">
+                                                        <div class="img"><img src="../img/porsche-taycan.png" alt="EV"></div>
+                                                    </div>
+                                                    <div class="row row-car-dtls">
+                                                        <div class="dtl date">
+                                                            <div class="tit">Last Charge Date</div>
+                                                            <div class="info">11-10-24</div>
+                                                        </div>
+                                                        <div class="dtl kw-used">
+                                                            <div class="tit">KW Used</div>
+                                                            <div class="info">15 KW</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Active Packages -->
+                                <div class="bx active-package act">
+                                    <div class="cont">
+                                        <div class="head">
+                                            <div class="ele-1">
+                                                <div class="tit">Active Package</div>
+                                                <div class="status">Lorem Ipsum is simply dummy text</div>
+                                            </div>
+                                        </div>
+                                        <div class="img-el">
+                                            <div class="img"><img src="../img/icon/charge-station-green.png" alt="Charger">
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="dtls">
+                                                <div class="row">
+                                                    <div class="tit">Package Name</div>
+                                                    <div class="val">Two Hour Slot</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="tit">Price</div>
+                                                    <div class="val">AED 4500.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="note">
+                                            <p>Provides access to charging stations with a maximum power output of 240 - 320KW.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row row-2">
+                                <!-- Chart -->
+                                <div class="bx charging-chart-bx dtls-bx">
+                                    <div class="head">
+                                        <div class="tit txt-nwrap flx">Charging Chart</div>
+                                        <div class="form-group">
+                                            <select class="select-one" title="Select">
+                                                <option value="txt">This year</option>
+                                                <option value="txt">Last year</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="chart-body">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                                <!-- Recent Activity -->
+                                <div class="bx recent-activity-bx dtls-bx">
+                                    <div class="cont">
+                                        <div class="head">
+                                            <div class="tit txt-nwrap flx">Recent Activity</div>
+                                        </div>
+                                        <div class="details">
+                                            <!-- Add CLass (st-scheduled) for Scheduled Data -->
+                                            <!-- Add CLass (st-completed) for Completed Data -->
+                                            <!-- Add CLass (st-cancelled) for Cancelled Data -->
+                                            <div class="dtl st-completed">
+                                                <div class="dtl-col-1">
+                                                    <div class="col-dot flx"><span></span></div>
+                                                    <div class="col">
+                                                        <div class="tit">Driver Start Moving to selected Location</div>
+                                                        <div class="time">27 March 2020, 19:30</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dtl-col-2">
+                                                    <div class="activity-status">Completed</div>
+                                                </div>
+                                            </div>
+                                            <div class="dtl st-scheduled">
+                                                <div class="dtl-col-1">
+                                                    <div class="col-dot flx"><span></span></div>
+                                                    <div class="col">
+                                                        <div class="tit">Driver Start Moving to selected Location</div>
+                                                        <div class="time">27 March 2020, 19:30</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dtl-col-2">
+                                                    <div class="activity-status">Schedule</div>
+                                                </div>
+                                            </div>
+                                            <div class="dtl st-cancelled">
+                                                <div class="dtl-col-1">
+                                                    <div class="col-dot flx"><span></span></div>
+                                                    <div class="col">
+                                                        <div class="tit">Driver Start Moving to selected Location</div>
+                                                        <div class="time">27 March 2020, 19:30</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dtl-col-2">
+                                                    <div class="activity-status">Cancelled</div>
+                                                </div>
+                                            </div>
+                                            <div class="dtl st-completed">
+                                                <div class="dtl-col-1">
+                                                    <div class="col-dot flx"><span></span></div>
+                                                    <div class="col">
+                                                        <div class="tit">Driver Start Moving to selected Location</div>
+                                                        <div class="time">27 March 2020, 19:30</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dtl-col-2">
+                                                    <div class="activity-status">Cancelled</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+    <!-- Main Popup -->
+    <!-- N: Add (act) class to display the Popup -->
+    <!-- Profile -->
+    <div class="corporate-profile pop-bx" id="popUpCorporateProfile">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Corporate Profile</div>
+                    <div class="desc">Learn about the history, usage and variations</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popUpCorporateProfile"></button>
+                </div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="oldPassword">Old Password</label>
+                    <input type="password" id="oldPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="oldPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="newPassword">Password</label>
+                    <input type="password" id="newPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="newPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label class="lab lab-st-one" for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="inp-st-one bor-rad">
+                    <button class="show-hid-pass btn-show-hid" show-inp-data="confirmPassword">Show</button>
+                </div>
+                <div class="alert" style="display: none;">password does not match</div>
+                <div class="row-btn">
+                    <input type="submit" value="Save" class="btn-one">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Upload Vehicle Data -->
+    <div class="upload-vehicle-data pop-bx" id="popupUploadVeicleFiles">
+        <div class="cont">
+            <div class="head">
+                <div class="col-1">
+                    <div class="tit">Upload Vehicle Data</div>
+                    <div class="desc">Select and upload the files of your choice</div>
+                </div>
+                <div class="col-2">
+                    <button class="close-btn clos-ele" parent-data="popupUploadVeicleFiles"></button>
+                </div>
+            </div>
+            <form class="upload-form">
+                <div class="upl-btn">
+                    <label for="vehicle-file-upload" id="lab-upload">
+                        <div class="top">
+                            <div class="img flx"><img src="../img/icon/cloud-add.png" alt="Upload"></div>
+                            <div class="tit">Choose a file or drag & drop it here</div>
+                            <div class="sub-tit">JPEG, PNG, PDG, and PDF</div>
+                        </div>
+                        <div class="btns">
+                            <button>Browse File</button>
+                        </div>
+                        <input type="file" id="vehicle-file-upload" name="uploadedFile">
+                    </label>
+                </div>
+                <div class="alert" style="display: none;">Error!</div>
+                <input type="submit" class="submit" value="Upload File">
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confim -->
+    <div class="delete-confirm-popup pop-bx" id="popUpDeleteConfim">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpDeleteConfim"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-1.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit">Are you sure you want to delete?</div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns hlf">
+                <div class="hlf-btn">
+                    <button class="btn btn-three clos-ele" parent-data="popUpDeleteConfim">No</button>
+                </div>
+                <div class="hlf-btn">
+                    <button class="btn btn-one">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Successful -->
+    <div class="successful-popup pop-bx" id="popUpSuccessfull">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpSuccessfull"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-2.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/checked-two.png" alt="Icon"></span> <span class="txt">Successful!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div class="error-popup pop-bx" id="popUpError">
+        <div class="cont">
+            <div class="head end">
+                <button class="close-btn clos-ele" parent-data="popUpError"></button>
+            </div>
+            <div class="wattman-icon flx"><img src="../img/wattman-3.png" alt="Icon"></div>
+            <div class="details">
+                <div class="tit"><span class="icon flx"><img src="../img/icon/error.png" alt="Icon"></span> <span class="txt">Error!</span></div>
+                <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="btns">
+                <button class="btn btn-one">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/general.js"></script>
+    <script src="master.js"></script>
+    <script src="swiper.js"></script>
+</body>
+
+</html>
